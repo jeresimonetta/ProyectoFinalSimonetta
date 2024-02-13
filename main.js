@@ -42,8 +42,9 @@ let carrito = []
 
 remeras.forEach((remera)=> {
     let content = document.createElement("div");
+    content.className = "tarjeta-producto remeras";
     content.innerHTML = `
-    <img src="${remera.img}">
+    <img src="${remera.img}" class="img-producto">
     <p>${remera.nombre}</p>
     <p>$${remera.precio}</p>
     `;
