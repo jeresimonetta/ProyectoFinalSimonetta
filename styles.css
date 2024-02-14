@@ -5,11 +5,11 @@
   
   @font-face {
     font-family: "bebas";
-    src: url("../fonts/BebasNeue-Regular.ttf");
+    src: url("./fonts/BebasNeue-Regular.ttf");
   }
   @font-face {
     font-family: "teko";
-    src: url("../fonts/Teko-VariableFont_wght.ttf");
+    src: url("./fonts/Teko-VariableFont_wght.ttf");
   }
   a {
     text-decoration: none;

@@ -96,7 +96,7 @@ verCarrito.addEventListener("click", () => {
         contenedorCarrito.append(carritoUsuario)
     });
 
-    let total = carrito.reduce((i, p) => p.precio, 0);
+    let total = carrito.reduce((i, p) => p.precio, 0); //corregir
     
     let totalCompra = document.createElement("div");
     totalCompra.innerHTML = `
@@ -105,3 +105,4 @@ verCarrito.addEventListener("click", () => {
     `;
     contenedorCarrito.append(totalCompra);
 });
+
