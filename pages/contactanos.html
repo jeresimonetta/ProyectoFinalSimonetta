@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main.css">
+    <meta name="description"
+        content="Descubre en nuestra tienda on line los más originales estampados para tus buzos y remeras. Sick Ink prints es vanguardia en moda urbana. Ponete en contacto con nosotros.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Sick Ink Prints | Moda urbana | Arte en la ropa</title>
+    <link rel="stylesheet" href="../styles.css">
+    <title>Sick Ink Prints - Contactanos | Moda urbana | Arte en la ropa</title>
 </head>
 
 <body>
-    <div class="grid-container grid-mobile-remeras">
+    <div class="grid-container grid-mobile-contactanos">
         <div class="grid-header">
-            <header class="backHeader">
-
+            <header>
                 <div>
                     <input type="search" name="Buscar" id="buscar">
                     <input type="submit" value="Buscar">
@@ -62,38 +62,41 @@
                         </div>
                     </nav>
                 </div>
-
             </header>
         </div>
 
         <div class="grid-main">
             <main>
-                <article class="portada">
+                <div class="portada">
                     <div class="img-portada">
-                        <img src="./img/portada8.png" alt="portada" class="foto-portada">
+                        <img src="../img/portada6.png" alt="portada" class="foto-portada">
                     </div>
-                    <div class="texto">
-                        <h2>Sick Ink Prints</h2>
-
-                        <p>¡Bienvenidx a nuestra tienda on line! En nuestro amplio catálogo, encontrarás una variedad de
-                            remeras y buzos estampados con estampados originales que te permitirán expresar tu estilo
-                            único.
-
-                            Nos enorgullece ofrecer opciones para todos los gustos, asegurando que cada cliente
-                            encuentre la prenda perfecta que refleje su personalidad.
-
-                            Además de la variedad de diseños, nos esforzamos por proporcionar una experiencia de compra
-                            en línea sin complicaciones. Nuestra plataforma fácil de usar te permite navegar sin
-                            esfuerzo, ver detalles de los productos y realizar compras seguras desde la comodidad de tu
-                            hogar.
-
-                            Trabajamos con materiales duraderos y suaves al tacto para garantizar que te sientas cómodo
-                            y con estilo en cada ocasión. Además, nuestras opciones de talles están diseñados para
-                            adaptarse a una amplia gama de cuerpos, porque creemos que la moda debe ser inclusiva.</p>
+                    <div class="form-contacto texto">
+                        <form action="">
+                            <div>
+                                <input type="text" name="nombre" id="nombre" placeholder="Tu nombre:">
+                            </div>
+                            <div>
+                                <input type="email" name="mail" id="mail" placeholder="Tu mail:">
+                            </div>
+                            <div>
+                                <textarea id="consulta" cols="30" rows="4" placeholder="Tu consulta:"></textarea>
+                            </div>
+                            <div>
+                                <input type="submit" value="Enviar">
+                            </div>
+                        </form>
+                        <article>
+                            <h3>Seguinos en:</h3>
+                            <a href="https://www.instagram.com/sick.ink.prints/"><img src="../img/instagram.png" alt=""
+                                    class="redes"></a>
+                            <a href=""><img src="../img/x (1).png" alt="x" class="redes"></a>
+                            <h3>Pedidos por WhatsApp:</h3>
+                            <a href=""><img src="../img/wa.png" alt="whatsapp" class="redes"></a>
+                        </article>
                     </div>
-                </article>
+                </div>
             </main>
-
         </div>
 
         <div id="contenedorCarrito" class="contenedorCarrito"></div>
@@ -111,13 +114,13 @@
                 </div>
             </footer>
         </div>
+        
+        <script src="../js/productos.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
     </div>
-
-    <script src="./js/productos.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
