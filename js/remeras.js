@@ -21,6 +21,15 @@ remeras.forEach((producto) => {
             nombre: producto.nombre,
             precio: producto.precio,
         });
+
         saveLocal();
+
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: `Agregaste ${producto.nombre} al carrito.`,
+            showConfirmButton: false,
+            timer: 2000
+        });
     });
 });

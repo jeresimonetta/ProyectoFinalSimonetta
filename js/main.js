@@ -2,7 +2,7 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let verCarrito = document.querySelector(".ver-carrito");
 let contenedorCarrito = document.getElementById("contenedorCarrito");
 
-verCarrito.addEventListener("click", () => {
+let mostrarCarrito = () => {
     contenedorCarrito.innerHTML = "";
     contenedorCarrito.style.display = "flex";
     let headerCarrito = document.createElement("div");
@@ -21,14 +21,23 @@ verCarrito.addEventListener("click", () => {
     })
 
     carrito.forEach((producto) => {
-        let carritoUsuario = document.createElement("div");
-        carritoUsuario.innerHTML = `
-        <img src="${producto.img}" class="img-producto">
+        let productoEnCarrito = document.createElement("div");
+        productoEnCarrito.className = "productoEnCarrito";
+        productoEnCarrito.innerHTML = `
+        <img src="${producto.img}" class="img-carrito">
         <p>${producto.nombre}</p>
         <p>$${producto.precio}</p>
         `;
 
-        contenedorCarrito.append(carritoUsuario)
+        contenedorCarrito.append(productoEnCarrito);
+        
+        let eliminar = document.createElement("p");
+        eliminar.innerText = "❌";
+        eliminar.className = "btnEliminarProducto";
+        productoEnCarrito.append(eliminar);
+
+        eliminar.addEventListener("click", eliminarProducto);
+        saveLocal();
     });
 
     let total = carrito.reduce((i, p) => i + p.precio, 0);
@@ -38,11 +47,23 @@ verCarrito.addEventListener("click", () => {
     Total a pagar $${total}
     <button class = "boton-compra">Finalizar compra</button>
     `;
+
     contenedorCarrito.append(totalCompra);
-});
+};
+
+verCarrito.addEventListener("click", mostrarCarrito);
+
+let eliminarProducto = () => {
+    let foundId = carrito.find((producto) => producto.id);
+
+    carrito = carrito.filter((carritoFiltrado) => {
+        return carritoFiltrado !== foundId;
+    });
+
+    mostrarCarrito();
+};
 
 const saveLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito))
     console.log(carrito)
 };
-
